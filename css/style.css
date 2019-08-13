@@ -3,6 +3,7 @@
 body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 12px;
+	background: repeating-linear-gradient(    45deg,    #039840,    #039840 10px,    #00421b 10px,    #00421b 20px  );
 }
 .libre-bold{
 	font-family: 'Libre Baskerville', serif;
@@ -20,6 +21,8 @@ body{
     /* background-attachment: fixed; */
     background-size: cover;
     background-repeat: no-repeat;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 .qr-container{
 	width: 105px;
