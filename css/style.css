@@ -13,7 +13,7 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .libre-bold {
@@ -178,11 +178,11 @@ footer p {
 }
 
 .font-10 {
-    font-size: 10px !important;
+    font-size: 10px;
 }
 
 .font-9 {
-    font-size: 9px !important;
+    font-size: 9px;
 }
 
 @media print {
@@ -198,11 +198,18 @@ footer p {
 
     .cert-title h2 {
         font-size: 50px;
-
     }
 
     .cert-title h5 {
-        font-size: 30px;
+        font-size: 27px;
+    }
+
+    .cert-heading h1 {
+        font-size: 60px;
+    }
+
+    .cert-heading h5 {
+        font-size: 40px;
     }
 
     p {
@@ -214,7 +221,13 @@ footer p {
         height: calc(100vh - 19px);
         width: 100%;
     }
+
     .stamp img {
-      height: 300px;
+        height: 300px;
+    }
+
+    .font-9,
+    .font-10 {
+        font-size: 16px;
     }
 }
