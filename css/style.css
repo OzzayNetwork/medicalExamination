@@ -184,6 +184,9 @@ footer p {
 .font-9 {
     font-size: 9px;
 }
+.figure-img img {
+        width: 100%;
+    }
 
 @media print {
     body {
