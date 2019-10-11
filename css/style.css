@@ -11,6 +11,9 @@ body {
     display: flex;
     justify-content: center;
 }
+.qr-code{
+	height: 70px;
+}
 
 * {
     box-sizing: border-box;
@@ -28,7 +31,7 @@ body {
 
 .a4-size {
     width: 595px;
-    height: 842px;
+    min-height: 990px;
     background: url("img/Group 31.jpg");
     /* background-attachment: fixed; */
     background-size: cover;
@@ -194,6 +197,21 @@ footer p {
         max-height: 100vh;
         overflow: hidden;
     }
+	
+	.margin{
+		margin-top: 130px !important;
+	}
+	
+	.nbk{
+		height: 100px !important;
+	}
+	.signature{
+		height: 78px !important;
+	}
+	
+	.qr-code{
+		height: 140px !important;
+	}
 
     .figure-img img {
         width: 100%;
@@ -231,6 +249,28 @@ footer p {
 
     .font-9,
     .font-10 {
-        font-size: 16px;
+        font-size: 14px;
     }
+	
+	.font-14{
+		font-size: 14px !important;
+	}
+}
+
+.signature{
+	height: 50px;
+}
+.spacing-1{
+	letter-spacing: 1px !important;
+}
+
+.font-12{
+	font-size: 12px !important;
+}
+.font-14{
+	font-size:14px;
+}
+
+.line-height-2{
+	line-height: 2;
 }
