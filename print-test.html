@@ -1,0 +1,74 @@
+<html>
+<head>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+<script type="text/javascript" src="js/jspdf.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script language="javascript">
+
+    $(document).ready(function(){
+        $('#conv').on('click',function(){
+            screenshot3();
+        });
+
+        function screenshot(){
+            const filename  = 'HealthCertificate.pdf';
+            html2canvas(document.querySelector("#capture"),{
+                height:210,
+                width:210
+            }).then(canvas => {
+               
+   
+    var image=(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/,''));
+    document.body.appendChild(canvas);
+    console.log(image);
+});
+        }
+
+        function screenshot2(){
+            html2canvas(document.getElementById("capture"),{
+                onrendered:function(canvas){
+                    var img=canvas.toDataURL("image/png");
+                    var doc=new jsPDF();
+                    doc.addImage(img,'JPEG',20,20);
+                    doc.save(test.pdf);
+                }
+            })
+        }
+
+        function screenshot3(){
+            html2canvas(document.querySelector("#capture")).then(canvas => {
+    document.body.appendChild(canvas);
+    var image=(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/,''));
+    console.log(image);
+});
+        }
+
+        
+
+        // // Variant
+// // This one lets you improve the PDF sharpness by scaling up the HTML node tree to render as an image before getting pasted on the PDF.
+// function printme(quality = 4) {
+// 		const filename  = 'ThisIsYourPDFFilename.pdf';
+
+// 		html2canvas(document.querySelector('#nodeToRenderAsPDF'), 
+// 								{scale: quality}
+// 						 ).then(canvas => {
+// 			let pdf = new jsPDF('p', 'mm', 'a4');
+// 			pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
+// 			pdf.save(filename);
+// 		});
+// 	}
+
+
+    });
+</script>
+</head>
+<body>
+<div id="capture" contenteditable>
+<p>screen hot whatever apperasr here kindly</p>
+<h1>workout please</h1>
+<img src="img/county-1.jpg">
+</div>
+<button id="conv">Convert</button>
+</body>
+</html>
